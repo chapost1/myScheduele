@@ -1,0 +1,146 @@
+////  html+ main   ////
+////  html+ main   ////
+#main{
+    background:white;
+    border:1px solid gray;
+    background-color:black;
+}
+////  html+ main   ////
+////  html+ main   ////
+
+
+
+
+
+///// Header /////
+///// Header /////
+///// Header /////
+.middleNow {
+    height: 200px;
+    background-color: black;
+    color: white;
+    border-bottom:1px solid white;
+    z-index:20;
+    a{
+        height:20px;
+    }
+    h1{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height:200px;
+        padding-top:100px;
+        padding-bottom: 100px;
+    }
+}
+///// Header /////
+///// Header /////
+///// Header /////
+
+
+
+
+///// NOTES/////////
+///// NOTES/////////
+///// NOTES/////////
+///// NOTES/////////
+.notesCont{
+    z-index:1;
+    position: relative;
+    padding:unset;
+    margin-top:20px;
+    .airDiv{
+        height:1px;
+        background:white;
+        width:100%;
+    }
+    #notesRow{
+        border-radius: 50%;
+        background-color:white;
+        height:500px;
+        position: relative;
+        margin: unset;
+        padding:unset;
+        border: 40px solid black;
+    .col-xs-12{
+        &:last-of-type{
+            animation: unset;
+        }
+        margin: 0 auto;
+    }
+    .note{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) + translateY(-50%);
+        .noteInnerDescription {
+            &:hover{
+                cursor: default;
+            }
+        }
+    }
+}
+}
+///// NOTES/////////
+///// NOTES/////////
+///// NOTES/////////
+///// NOTES/////////
+
+
+
+
+  ///////////////////////////////////////////
+ /////////    MEDIA QUERY     //////////////
+///////////////////////////////////////////
+
+
+///// NOTES/////////
+///// NOTES/////////
+@media screen and (max-width:500px){
+    .notesCont{
+        #notesRow{
+            border: 30px solid black;
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    .notesCont{
+        #notesRow{
+            border: 20px solid black;
+        }
+    }
+}
+
+@media screen and (max-width:405px){
+    .notesCont{
+        #notesRow{
+            border: 10px solid black;
+        }
+    }
+}
+
+@media screen and (max-width:354px){
+    .notesCont{
+        #notesRow{
+            border: 5px solid black;
+        }
+    }
+}
+
+@media screen and (max-width:320px){
+    .notesCont{
+        #notesRow{
+            border-radius: 40%;
+            border: 1px solid black;
+        }
+    }
+}
+///// NOTES/////////
+///// NOTES/////////
+
+
+
+  ///////////////////////////////////////////
+ /////////    MEDIA QUERY     //////////////
+///////////////////////////////////////////

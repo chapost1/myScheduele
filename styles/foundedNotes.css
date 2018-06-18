@@ -1,0 +1,100 @@
+#main {
+  background: white;
+  border: 1px solid gray;
+  background-color: black;
+}
+
+.middleNow {
+  height: 200px;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
+  z-index: 20;
+}
+
+.middleNow a {
+  height: 20px;
+}
+
+.middleNow h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.notesCont {
+  z-index: 1;
+  position: relative;
+  padding: unset;
+  margin-top: 20px;
+}
+
+.notesCont .airDiv {
+  height: 1px;
+  background: white;
+  width: 100%;
+}
+
+.notesCont #notesRow {
+  border-radius: 50%;
+  background-color: white;
+  height: 500px;
+  position: relative;
+  margin: unset;
+  padding: unset;
+  border: 40px solid black;
+}
+
+.notesCont #notesRow .col-xs-12 {
+  margin: 0 auto;
+}
+
+.notesCont #notesRow .col-xs-12:last-of-type {
+  animation: unset;
+}
+
+.notesCont #notesRow .note {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%)translateY(-50%);
+}
+
+.notesCont #notesRow .note .noteInnerDescription:hover {
+  cursor: default;
+}
+
+@media screen and (max-width: 500px) {
+  .notesCont #notesRow {
+    border: 30px solid black;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notesCont #notesRow {
+    border: 20px solid black;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .notesCont #notesRow {
+    border: 10px solid black;
+  }
+}
+
+@media screen and (max-width: 354px) {
+  .notesCont #notesRow {
+    border: 5px solid black;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .notesCont #notesRow {
+    border-radius: 40%;
+    border: 1px solid black;
+  }
+}
+/*# sourceMappingURL=foundedNotes.css.map */

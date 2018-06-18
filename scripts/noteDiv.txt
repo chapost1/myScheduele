@@ -1,0 +1,13 @@
+/* <div class="row notesRow">
+            <div class=" col-md-2 col-sm-6 col-xs-12">
+                <div class="note">
+                    <div class="glyphicon glyphicon-trash noteDelete"></div>
+                    <div class="noteInnerDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, nulla. At velit possimus dolorem vitae id amet vel quo
+                        unde, distinctio eum voluptatum excepturi quaerat exercitationem similique? Dolores, explicabo quos.
+                    </div>
+                    <div class="noteDateValue">22/05/2018</div>
+                    <div class="noteTimeValue">12:09</div>
+                </div>
+            </div>
+        </div> */

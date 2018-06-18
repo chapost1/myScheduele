@@ -1,0 +1,118 @@
+<html type="text/html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta set="X-Content-Type-Options" value="nosniff">
+    <title>My Schedule</title>
+    <link rel="icon" type="image/png" href="images/faviconNote.png" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        type="text/css" crossorigin="anonymous">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        type="text/css" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        type="application/javascript" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        type="text/css" crossorigin="anonymous">
+    <!--CSS File-->
+    <link rel="stylesheet" type="text/css" href="styles/schedule.css" />
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body class="container-fluid" id="main">
+    <!--Search Toolbar-->
+    <header class="row"></header>
+    <nav class="row nav-search">
+        <div class="col-8"></div>
+        <div class="col-3">
+            <form action="foundedNotes.html">
+                <div class="row form-group">
+            <input required="required" class="col-10" id="searchVector" type="text" placeholder="Search Note/s by keywords..." oninvalid="this.setCustomValidity('Please fill in keywords to search..')"/>
+            <input class="col-2" id="searchNote" type="submit" value="">
+            <div id="find-error"></div>
+                </div>
+        </form>
+        </div>
+        <div class="col-1"></div>
+    </nav>
+    <!--Title-->
+    <div class="row titleCont">
+        <div class="col-3"></div>
+        <div class="col-6 titleGiven"></div>
+        <div class="col-3"></div>
+    </div>
+    <!--Advertisment-->
+    <a href="https://www.johnbryce.co.il/" class="jewish-bryce">
+        <img class="adv-pic" src="images/JewishBryceAdvertisment.jpg"/>
+        <div id="close-adv">Close &times;</div>
+    </a>
+    <!--Popup Google <3-->
+    <div id="googleSpiderPopup">
+        <span id="spanOfSpider">&times;</span>
+        <div class="spiderWeb"></div>
+        <h1>Good Morning!</h1>
+        <div class="googLogo"></div>
+        <a href="https://www.google.com/">Visit Google!</a>
+    </div>
+    <!--Popup(Past Date)-->
+    <div id="futureNotePopup" class="fade-in">
+        <p>please note that your date belongs to the past. please enter a future one.</p>
+    </div>
+    <!--Helper PopUp-->
+    <div id="overlay"></div>
+    <div id="helper-popup-message">
+        <span id="spanOfPopup">&times;</span>
+        <div id="popBTNhelper" class=" btn btn-warning">Dismiss Helper</div>
+        <h3>Time isn't required. altough if you do insert time you will have to follow the exact format. This is a sensitive
+            Note Schedule Helper, notice the formats we are using.
+            <br> notice you will have to use a valid date. for example, 29th febuary
+            <br>Will happen only every 4 years.</h3>
+    </div>
+    <!--Helper, Fixed.-->
+    <div id="helperLocal" class="helper fade-in">
+        <p>Helper</p>
+    </div>
+    <!--Inputs-->
+    <form class="inputsForm">
+        <div class="form-group">
+            <label for="dateInput">Date:</label>
+            <input required="required" id="dateInput" class="form-control" type="text" placeholder="dd/mm/yyyy" pattern="^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$"
+                oninvalid="this.setCustomValidity('Please fill in the required dd/mm(0-12)/yyyy exact format.')" oninput="this.setCustomValidity('Please fill in the required dd/mm(0-12)/yyyy exact format.')"
+            />
+        </div>
+        <div class="form-group">
+            <label for="timeInput">Time:</label>
+            <input id="timeInput" type="text" class="form-control" placeholder="hh:mm" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" oninvalid="this.setCustomValidity('Please fill in the required hh(0-24):mm(0-59) format.')"
+                oninput="this.setCustomValidity('Please fill in the required hh(0-24):mm(0-59) format.')" />
+        </div>
+        <div class="form-group">
+            <label for="descArea">Description:</label>
+            <textarea required="required" class="descArea form-control" placeholder="Your Note Description"></textarea>
+        </div>
+        <button type="btnSubmit" class="btn btn-success">Add Note</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span id="clearBTN" class="btn btn-danger">Clear All</span>
+    </form>
+    <!--!!!!!!!!Where the Notes Arrives To!!!!!!!!-->
+    <div class="row notesCont">
+        <div class="row notesRow" id="notesRow">
+        </div>
+    </div>
+    <footer class="row">
+        <span>&copy;Copyrignts All Reserved To Client-Side.</span>
+        <div class="col-8">this site have a footer = </div>
+        <div class="col-3">true</div>
+        <div class="col-1">;</div>
+    </footer>
+</body>
+<script src="scripts/schedule.js" type="application/javascript"></script>
+
+</html>
